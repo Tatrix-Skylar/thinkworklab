@@ -244,6 +244,68 @@ li + li {
   gap: 1rem;
 }
 
+.numbers-section {
+  text-align: center;
+}
+
+.numbers-inner,
+.media-inner {
+  max-width: 900px;
+}
+
+.numbers-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.number-item {
+  padding: 0.5rem 1rem;
+}
+
+.number-value {
+  margin: 0;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 700;
+  font-family: "Source Serif 4", Georgia, serif;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.number-label {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  border-top: 2px solid rgba(242, 94, 107, 0.35);
+  padding-top: 0.7rem;
+}
+
+.media-section {
+  text-align: center;
+}
+
+.media-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.media-list a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  color: var(--text);
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.media-list a:hover {
+  color: var(--accent);
+  border-color: rgba(242, 94, 107, 0.5);
+}
+
 
 .contato-grid p {
   max-width: 58ch;
@@ -305,7 +367,8 @@ a:hover {
 @media (max-width: 900px) {
   .grid-two,
   .cards,
-  .profiles {
+  .profiles,
+  .numbers-grid {
     grid-template-columns: 1fr;
   }
 
