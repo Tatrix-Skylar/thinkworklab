@@ -107,6 +107,26 @@ body {
   border-bottom: 1px solid var(--line);
 }
 
+.hero-image {
+  position: relative;
+  background-image: url("https://thinkworklab.com/wp-content/uploads/2025/09/forward80.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.hero-image .hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
 .hero-inner {
   max-width: 920px;
   display: grid;
