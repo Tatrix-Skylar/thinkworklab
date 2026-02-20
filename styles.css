@@ -1,10 +1,10 @@
 :root {
-  --bg: #f6f6f4;
+  --bg: #ffffff;
   --paper: #ffffff;
-  --text: #171717;
-  --muted: #5e5e5e;
-  --line: #d9d9d1;
-  --accent: #202a37;
+  --text: #161616;
+  --muted: #5d5d5d;
+  --line: #e9e7e4;
+  --accent: #f25e6b;
 }
 
 * {
@@ -21,7 +21,7 @@ body {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .container {
@@ -30,11 +30,12 @@ body {
 }
 
 .site-header {
-  background: var(--bg);
+  background: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
   z-index: 20;
+  backdrop-filter: blur(8px);
 }
 
 .header-inner {
@@ -64,10 +65,11 @@ body {
   color: var(--muted);
   text-decoration: none;
   font-size: 0.92rem;
+  transition: color 0.2s ease;
 }
 
 .nav a:hover {
-  color: var(--text);
+  color: var(--accent);
 }
 
 .hero {
@@ -76,7 +78,7 @@ body {
 }
 
 .hero-inner {
-  max-width: 900px;
+  max-width: 920px;
 }
 
 .eyebrow {
@@ -84,7 +86,7 @@ body {
   letter-spacing: 0.08em;
   font-weight: 600;
   font-size: 0.74rem;
-  color: var(--muted);
+  color: var(--accent);
 }
 
 h1,
@@ -96,15 +98,33 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2rem, 6vw, 4.25rem);
-  max-width: 16ch;
-  margin: 0.3rem 0 1.2rem;
+  font-size: clamp(2rem, 5.5vw, 4rem);
+  max-width: 20ch;
+  margin: 0.4rem 0 1.2rem;
 }
 
 .hero-copy {
-  max-width: 60ch;
-  font-size: 1.08rem;
+  max-width: 66ch;
+  font-size: 1.06rem;
   color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.15rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+}
+
+.button:hover {
+  color: #ffffff;
+  background: var(--accent);
 }
 
 .section {
@@ -124,6 +144,23 @@ h1 {
 
 h2 {
   font-size: clamp(1.6rem, 3vw, 2.3rem);
+}
+
+#servicos h2,
+#innovations h2 {
+  position: relative;
+  display: inline-block;
+}
+
+#servicos h2::after,
+#innovations h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  width: 2.4rem;
+  height: 2px;
+  background: var(--accent);
 }
 
 p {
@@ -146,7 +183,7 @@ p {
 
 .card h3,
 .profile h3 {
-  font-size: 1.3rem;
+  font-size: 1.28rem;
   margin-bottom: 0.7rem;
 }
 
@@ -181,6 +218,14 @@ li + li {
   flex-wrap: wrap;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--accent);
 }
 
 @media (max-width: 900px) {
