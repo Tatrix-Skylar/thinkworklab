@@ -73,20 +73,23 @@ body {
 }
 
 .hero {
-  padding: 8rem 0 6rem;
+  padding: 9.5rem 0 7rem;
   border-bottom: 1px solid var(--line);
 }
 
 .hero-inner {
-  max-width: 920px;
+  max-width: 860px;
+  display: grid;
+  gap: 1.1rem;
 }
 
 .eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   font-weight: 600;
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   color: var(--accent);
+  margin: 0;
 }
 
 h1,
@@ -98,33 +101,33 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2rem, 5.5vw, 4rem);
-  max-width: 20ch;
-  margin: 0.4rem 0 1.2rem;
-  position: relative;
-  padding-bottom: 0.9rem;
+  font-size: clamp(2.2rem, 5.8vw, 4.4rem);
+  max-width: 16ch;
+  margin: 0.2rem 0 0;
+  line-height: 1.12;
 }
 
-h1::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 3rem;
-  height: 2px;
-  background: var(--accent);
+.hero-accent {
+  width: 5rem;
+  height: 3px;
+  background: #f25e6b;
+  margin: 0.2rem 0 0.3rem;
 }
 
 .hero-copy {
-  max-width: 66ch;
-  font-size: 1.06rem;
+  max-width: 62ch;
+  font-size: 1.08rem;
   color: var(--muted);
-  margin-bottom: 1rem;
+  margin: 0;
+}
+
+.hero-copy + .hero-copy {
+  margin-top: -0.1rem;
 }
 
 .button {
   display: inline-block;
-  margin-top: 1rem;
+  margin-top: 1.35rem;
   padding: 0.7rem 1.15rem;
   border: 1px solid var(--accent);
   color: #ffffff;
@@ -256,6 +259,14 @@ a:hover {
   }
 
   .hero {
-    padding-top: 6rem;
+    padding: 7rem 0 5rem;
+  }
+
+  h1 {
+    max-width: 18ch;
+  }
+
+  .hero-copy {
+    font-size: 1.02rem;
   }
 }
