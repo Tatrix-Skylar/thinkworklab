@@ -311,6 +311,18 @@ li + li {
   border: 1px solid var(--line);
 }
 
+
+.founders-image {
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.founders-image img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
+
 /* PROFILES */
 .profiles {
   margin-top: var(--space-4);
@@ -490,6 +502,10 @@ a:hover {
   .innovations-image {
     order: -1;
     margin-bottom: 1.5rem;
+  }
+
+  .founders-image {
+    margin-bottom: var(--space-3);
   }
 }
 
