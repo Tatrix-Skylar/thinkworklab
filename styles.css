@@ -281,6 +281,16 @@ li + li {
   margin-top: 1rem;
 }
 
+.innovations-grid {
+  align-items: center;
+}
+
+.innovations-image img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
+
 /* PROFILES */
 .profiles {
   margin-top: var(--space-4);
@@ -450,6 +460,17 @@ a {
 
 a:hover {
   color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .innovations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .innovations-image {
+    order: -1;
+    margin-bottom: 1.5rem;
+  }
 }
 
 /* RESPONSIVE */
