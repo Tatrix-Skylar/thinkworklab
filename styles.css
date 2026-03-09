@@ -343,11 +343,16 @@ p {
   width: calc(100% + 2.7rem);
   margin: -1.35rem -1.35rem 1rem;
   height: clamp(130px, 15vw, 180px);
-  background:
-    linear-gradient(130deg, color-mix(in srgb, var(--accent) 24%, #fff) 0%, transparent 52%),
-    linear-gradient(315deg, color-mix(in srgb, var(--accent-dark) 26%, #fff) 0%, transparent 48%),
-    #eceae6;
   border-bottom: 1px solid color-mix(in srgb, var(--accent) 38%, transparent);
+  overflow: hidden;
+}
+
+.service-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
 }
 
 .service-card:hover {
@@ -357,11 +362,8 @@ p {
   background-color: color-mix(in srgb, var(--accent) 7%, #fff);
 }
 
-.service-card:hover .service-card-media {
-  background:
-    linear-gradient(130deg, color-mix(in srgb, var(--accent) 34%, #fff) 0%, transparent 52%),
-    linear-gradient(315deg, color-mix(in srgb, var(--accent-dark) 34%, #fff) 0%, transparent 48%),
-    #eceae6;
+.service-card:hover .service-card-media img {
+  transform: scale(1.04);
 }
 
 .service-card p {
