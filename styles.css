@@ -5,6 +5,7 @@
   --muted: #5d5d5d;
   --line: #e9e7e4;
   --accent: #f25e6b;
+  --accent-dark: #dc4d5a;
 
   /* Editorial rhythm */
   --radius: 14px;
@@ -104,10 +105,10 @@ body {
 /* HERO */
 .hero {
   position: relative;
-  min-height: 88vh;
+  min-height: calc(100vh - 72px);
   display: flex;
   align-items: center;
-  padding: clamp(56px, 8vw, 110px) 0;
+  padding: clamp(24px, 4vw, 52px) 0;
   border-bottom: 1px solid var(--line);
   overflow: hidden;
   background: #e9e6e1;
@@ -133,13 +134,16 @@ body {
 .hero-image .container {
   position: relative;
   z-index: 2;
+  width: min(1240px, calc(100% - (var(--gutter) * 2)));
+  display: flex;
+  justify-content: flex-start;
 }
 
 .hero-panel {
-  width: min(720px, 100%);
-  background: rgba(255, 255, 255, 0.94);
-  padding: clamp(28px, 4vw, 52px);
-  box-shadow: 0 18px 50px rgba(17, 17, 17, 0.10);
+  width: min(100%, 720px);
+  background: rgba(255, 255, 255, 0.95);
+  padding: clamp(22px, 2.8vw, 40px);
+  box-shadow: 0 16px 42px rgba(17, 17, 17, 0.11);
   border: 1px solid rgba(17,17,17,0.08);
   border-radius: 0;
 }
@@ -147,7 +151,7 @@ body {
 .hero-inner {
   max-width: 100%;
   display: grid;
-  gap: var(--space-2);
+  gap: clamp(10px, 1.2vw, 16px);
 }
 
 .eyebrow {
@@ -168,38 +172,39 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.4rem, 5vw, 4.4rem);
-  max-width: 11ch;
-  margin: 0.15rem 0 0;
-  line-height: 1.02;
+  font-size: clamp(1.95rem, 3.3vw, 3.15rem);
+  max-width: 17ch;
+  margin: 0.1rem 0 0;
+  line-height: 1.06;
   letter-spacing: -0.03em;
   color: var(--text);
 }
 
 .hero-accent {
-  width: 4rem;
+  width: 3.5rem;
   height: 2px;
   background: var(--accent);
   border-radius: 999px;
-  margin: 0.35rem 0 0.4rem;
+  margin: 0.2rem 0 0.25rem;
 }
 
 .hero-copy {
-  max-width: 62ch;
-  font-size: clamp(1rem, 0.25vw + 0.98rem, 1.1rem);
+  max-width: 64ch;
+  font-size: clamp(0.95rem, 0.2vw + 0.92rem, 1.03rem);
+  line-height: 1.58;
   color: var(--muted);
   margin: 0;
 }
 
 .hero-copy + .hero-copy {
-  margin-top: 0;
+  margin-top: 0.08rem;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.85rem;
-  margin-top: var(--space-2);
+  gap: 0.75rem;
+  margin-top: 0.45rem;
 }
 
 .button {
@@ -573,7 +578,7 @@ a:hover {
 
   .hero {
     min-height: auto;
-    padding: clamp(40px, 10vw, 72px) 0;
+    padding: clamp(34px, 9vw, 64px) 0;
   }
 
   .hero-panel {
@@ -581,7 +586,7 @@ a:hover {
   }
 
   h1 {
-    max-width: 14ch;
+    max-width: 16ch;
   }
 }
 
