@@ -172,8 +172,8 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.05rem, 3.7vw, 3.45rem);
-  max-width: 13ch;
+  font-size: clamp(1.95rem, 3.3vw, 3.15rem);
+  max-width: 17ch;
   margin: 0.1rem 0 0;
   line-height: 1.06;
   letter-spacing: -0.03em;
@@ -189,7 +189,7 @@ h1 {
 }
 
 .hero-copy {
-  max-width: 60ch;
+  max-width: 64ch;
   font-size: clamp(0.95rem, 0.2vw + 0.92rem, 1.03rem);
   line-height: 1.58;
   color: var(--muted);
@@ -586,7 +586,7 @@ a:hover {
   }
 
   h1 {
-    max-width: 14ch;
+    max-width: 16ch;
   }
 }
 
