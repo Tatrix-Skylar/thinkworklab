@@ -425,10 +425,41 @@ li + li {
   align-items: center;
 }
 
+.innovations-highlight {
+  background: #ece8e3;
+}
+
+.innovations-content {
+  max-width: 34rem;
+}
+
+.innovations-content p {
+  font-size: clamp(1.06rem, 0.36vw + 0.98rem, 1.2rem);
+}
+
+.innovations-content .feature-list {
+  margin-bottom: 1.65rem;
+}
+
+.button-innovations {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.button-innovations:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
 .innovations-image img {
   width: 100%;
   height: auto;
-  border: 1px solid var(--line);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+  box-shadow: var(--shadow-soft);
 }
 
 
