@@ -504,11 +504,17 @@ li + li {
 }
 
 /* STATS */
-.stats {
+.stats-carousel {
   margin-top: var(--space-4);
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-3);
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.stats-track {
+  position: relative;
+  min-height: 250px;
 }
 
 .stat {
@@ -518,6 +524,54 @@ li + li {
   padding: 1.25rem 1.35rem;
   position: relative;
   overflow: hidden;
+  transition: opacity 0.35s ease;
+}
+
+.stats-track .stat {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.stats-track .stat.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.carousel-control {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 36%, var(--line));
+  background: #fff;
+  color: var(--accent);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.carousel-control:hover {
+  border-color: var(--accent-dark);
+  color: var(--accent-dark);
+}
+
+.carousel-dots {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--line) 70%, var(--muted));
+}
+
+.dot.is-active {
+  background: var(--accent);
 }
 
 .stat::before {
@@ -674,8 +728,7 @@ a:hover {
   }
 
   .cards,
-  .profiles,
-  .stats {
+  .profiles {
     grid-template-columns: 1fr;
   }
 
@@ -685,6 +738,10 @@ a:hover {
 
   .media-list {
     grid-template-columns: 1fr;
+  }
+
+  .stats-track {
+    min-height: 280px;
   }
 
   .hero {
@@ -725,6 +782,18 @@ a:hover {
 
   .cards.services-cards {
     grid-template-columns: 1fr;
+  }
+
+  .stats-carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-control {
+    display: none;
+  }
+
+  .stats-track {
+    min-height: 320px;
   }
 
   .service-card-media {

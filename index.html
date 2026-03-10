@@ -52,15 +52,46 @@
         </div>
       </section>
 
-      <section id="sobre" class="section">
-        <div class="container grid-two">
-          <h2>Sobre a Think Work Lab</h2>
-          <div>
-            <p>
-              Think Work Lab atua na interseção entre pesquisa, conteúdo e inovação. Nosso trabalho
-              apoia empresas, líderes e organizações que buscam compreender o presente e se preparar
-              para o futuro do trabalho.
-            </p>
+      <section id="numeros" class="section">
+        <div class="container">
+          <h2>Think Work Lab em números</h2>
+          <div class="stats-carousel" aria-label="Carrossel com os números da Think Work Lab">
+            <button class="carousel-control prev" type="button" aria-label="Número anterior">‹</button>
+            <div class="stats-track" data-stats-track>
+              <div class="stat is-active">
+                <strong>+15</strong>
+                <span>metodologias proprietárias de pesquisa</span>
+              </div>
+              <div class="stat">
+                <strong>+6.000</strong>
+                <span>respondentes (profissionais, gestores, líderes e RHs)</span>
+              </div>
+              <div class="stat">
+                <strong>+120</strong>
+                <span>temas estudados</span>
+              </div>
+              <div class="stat">
+                <strong>+600</strong>
+                <span>projetos certificados pelo prêmio Think Work Innovations</span>
+              </div>
+              <div class="stat">
+                <strong>+12</strong>
+                <span>categorias e trilhas de análise</span>
+              </div>
+              <div class="stat">
+                <strong>4</strong>
+                <span>anos de histórico comparativo</span>
+              </div>
+            </div>
+            <button class="carousel-control next" type="button" aria-label="Próximo número">›</button>
+          </div>
+          <div class="carousel-dots" aria-hidden="true">
+            <span class="dot is-active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
           </div>
         </div>
       </section>
@@ -186,22 +217,15 @@
         </div>
       </section>
 
-      <section id="numeros" class="section">
-        <div class="container">
-          <h2>Think Work Lab em números</h2>
-          <div class="stats">
-            <div class="stat">
-              <strong>1.000+</strong>
-              <span>projetos analisados</span>
-            </div>
-            <div class="stat">
-              <strong>500+</strong>
-              <span>empresas participantes</span>
-            </div>
-            <div class="stat">
-              <strong>1,5 milhão</strong>
-              <span>de profissionais impactados</span>
-            </div>
+      <section id="sobre" class="section">
+        <div class="container grid-two">
+          <h2>Sobre a Think Work Lab</h2>
+          <div>
+            <p>
+              Think Work Lab atua na interseção entre pesquisa, conteúdo e inovação. Nosso trabalho
+              apoia empresas, líderes e organizações que buscam compreender o presente e se preparar
+              para o futuro do trabalho.
+            </p>
           </div>
         </div>
       </section>
@@ -360,5 +384,34 @@
         <p>Pesquisa, inteligência editorial e inovação para líderes de RH.</p>
       </div>
     </footer>
+
+    <script>
+      const statsTrack = document.querySelector('[data-stats-track]');
+
+      if (statsTrack) {
+        const slides = Array.from(statsTrack.querySelectorAll('.stat'));
+        const dots = Array.from(document.querySelectorAll('.carousel-dots .dot'));
+        const prevButton = document.querySelector('.carousel-control.prev');
+        const nextButton = document.querySelector('.carousel-control.next');
+        let currentIndex = 0;
+
+        const updateCarousel = (nextIndex) => {
+          currentIndex = (nextIndex + slides.length) % slides.length;
+
+          slides.forEach((slide, index) => {
+            slide.classList.toggle('is-active', index === currentIndex);
+          });
+
+          dots.forEach((dot, index) => {
+            dot.classList.toggle('is-active', index === currentIndex);
+          });
+        };
+
+        prevButton?.addEventListener('click', () => updateCarousel(currentIndex - 1));
+        nextButton?.addEventListener('click', () => updateCarousel(currentIndex + 1));
+
+        setInterval(() => updateCarousel(currentIndex + 1), 3500);
+      }
+    </script>
   </body>
 </html>
