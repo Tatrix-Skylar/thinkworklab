@@ -514,7 +514,7 @@ li + li {
 
 .stats-track {
   position: relative;
-  min-height: 205px;
+  min-height: 250px;
 }
 
 .stat {
@@ -741,7 +741,7 @@ a:hover {
   }
 
   .stats-track {
-    min-height: 235px;
+    min-height: 280px;
   }
 
   .hero {
@@ -793,7 +793,7 @@ a:hover {
   }
 
   .stats-track {
-    min-height: 250px;
+    min-height: 320px;
   }
 
   .service-card-media {
