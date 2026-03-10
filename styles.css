@@ -330,9 +330,11 @@ p {
 }
 
 .service-card {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   border-radius: var(--radius);
   border: 1px solid var(--accent);
-  border-left: 6px solid var(--accent);
   min-height: 100%;
   overflow: hidden;
   transition: transform 0.18s ease, box-shadow 0.22s ease, border-color 0.22s ease,
@@ -340,9 +342,9 @@ p {
 }
 
 .service-card-media {
-  width: calc(100% + 2.7rem);
-  margin: -1.35rem -1.35rem 1rem;
-  height: clamp(130px, 15vw, 180px);
+  width: 100%;
+  margin: 0;
+  height: clamp(150px, 15vw, 190px);
   border-bottom: 1px solid color-mix(in srgb, var(--accent) 38%, transparent);
   overflow: hidden;
 }
@@ -353,6 +355,10 @@ p {
   object-fit: cover;
   display: block;
   transition: transform 0.35s ease;
+}
+
+.service-card-body {
+  padding: 1.35rem 1.35rem 1.25rem;
 }
 
 .service-card:hover {
@@ -384,6 +390,16 @@ p {
   transform: translateY(-2px);
   box-shadow: var(--shadow-soft);
   border-color: color-mix(in srgb, var(--accent) 18%, var(--line));
+}
+
+
+.cards .service-card {
+  padding: 0;
+  border: 1px solid var(--accent);
+}
+
+.cards .service-card:hover {
+  border-color: var(--accent-dark);
 }
 
 .card h3,
@@ -681,7 +697,7 @@ a:hover {
   }
 
   .service-card-media {
-    height: 150px;
+    height: 160px;
   }
 
   .hero-inner {
