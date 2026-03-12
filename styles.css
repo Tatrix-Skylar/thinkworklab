@@ -281,7 +281,8 @@ h2 {
 #numeros h2,
 #quem-faz h2,
 #contato h2,
-#sobre h2 {
+#sobre h2,
+#como-ajudamos h2 {
   position: relative;
   display: inline-block;
 }
@@ -292,7 +293,8 @@ h2 {
 #numeros h2::after,
 #quem-faz h2::after,
 #contato h2::after,
-#sobre h2::after {
+#sobre h2::after,
+#como-ajudamos h2::after {
   content: "";
   position: absolute;
   left: 0;
@@ -306,6 +308,68 @@ h2 {
 p {
   margin-top: 0;
   max-width: 75ch;
+}
+
+
+.how-we-help {
+  background: #f2efe9;
+}
+
+#como-ajudamos h2 {
+  margin-top: 0.45rem;
+  max-width: 24ch;
+}
+
+.how-we-help-grid {
+  margin-top: var(--space-4);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.how-we-help-card {
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--accent) 34%, var(--line));
+  border-radius: var(--radius-sm);
+  padding: 0;
+  overflow: hidden;
+  transition: transform 0.16s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.how-we-help-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+  border-color: var(--accent-dark);
+}
+
+.how-we-help-media {
+  margin: 0;
+  width: 100%;
+  height: clamp(170px, 15vw, 210px);
+  overflow: hidden;
+}
+
+.how-we-help-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.how-we-help-card:hover .how-we-help-media img {
+  transform: scale(1.04);
+}
+
+.how-we-help-card h3 {
+  padding: 1.15rem 1.15rem 0;
+  margin-bottom: 0.55rem;
+}
+
+.how-we-help-card p {
+  margin: 0;
+  padding: 0 1.15rem 1.2rem;
+  color: var(--muted);
 }
 
 /* CARDS */
