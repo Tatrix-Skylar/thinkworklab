@@ -282,7 +282,8 @@ h2 {
 #quem-faz h2,
 #contato h2,
 #sobre h2,
-#como-ajudamos h2 {
+#como-ajudamos h2,
+#inteligencia-think-work h2 {
   position: relative;
   display: inline-block;
 }
@@ -294,7 +295,8 @@ h2 {
 #quem-faz h2::after,
 #contato h2::after,
 #sobre h2::after,
-#como-ajudamos h2::after {
+#como-ajudamos h2::after,
+#inteligencia-think-work h2::after {
   content: "";
   position: absolute;
   left: 0;
@@ -370,6 +372,72 @@ p {
   margin: 0;
   padding: 0 1.15rem 1.2rem;
   color: var(--muted);
+}
+
+
+.intelligence-section {
+  background: #050505;
+  border-bottom: 1px solid #151515;
+}
+
+#inteligencia-think-work h2 {
+  margin-top: 0.45rem;
+  color: #ffffff;
+}
+
+#inteligencia-think-work .eyebrow {
+  color: color-mix(in srgb, var(--accent) 88%, #fff);
+}
+
+.intelligence-list {
+  margin-top: var(--space-4);
+  display: grid;
+  gap: clamp(1.4rem, 3vw, 2.4rem);
+}
+
+.intelligence-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.3rem, 2.8vw, 2.8rem);
+}
+
+.intelligence-item.reverse .intelligence-media {
+  order: 2;
+}
+
+.intelligence-item.reverse .intelligence-content {
+  order: 1;
+}
+
+.intelligence-media {
+  margin: 0;
+  min-height: clamp(220px, 32vw, 360px);
+}
+
+.intelligence-media img {
+  width: 100%;
+  height: 100%;
+  min-height: clamp(220px, 32vw, 360px);
+  object-fit: cover;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.intelligence-content {
+  color: #f5f5f5;
+}
+
+.intelligence-content h3 {
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.35rem, 1.3vw, 2rem);
+}
+
+.intelligence-content p {
+  color: #cfcfcf;
+  margin: 0;
+  max-width: 52ch;
 }
 
 /* CARDS */
@@ -810,6 +878,20 @@ a:hover {
 
   .media-list {
     grid-template-columns: 1fr;
+  }
+
+  .intelligence-item {
+    grid-template-columns: 1fr;
+  }
+
+  .intelligence-item.reverse .intelligence-media,
+  .intelligence-item.reverse .intelligence-content {
+    order: initial;
+  }
+
+  .intelligence-media,
+  .intelligence-media img {
+    min-height: 230px;
   }
 
   .stats-track {
