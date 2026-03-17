@@ -283,7 +283,8 @@ h2 {
 #contato h2,
 #sobre h2,
 #como-ajudamos h2,
-#inteligencia-think-work h2 {
+#inteligencia-think-work h2,
+#como-think-work-ajuda h2 {
   position: relative;
   display: inline-block;
 }
@@ -296,7 +297,8 @@ h2 {
 #contato h2::after,
 #sobre h2::after,
 #como-ajudamos h2::after,
-#inteligencia-think-work h2::after {
+#inteligencia-think-work h2::after,
+#como-think-work-ajuda h2::after {
   content: "";
   position: absolute;
   left: 0;
@@ -438,6 +440,112 @@ p {
   color: #cfcfcf;
   margin: 0;
   max-width: 52ch;
+}
+
+.companies-help-section {
+  background: #f3f1ee;
+}
+
+.companies-help-layout {
+  display: grid;
+  gap: var(--space-4);
+}
+
+#como-think-work-ajuda h2 {
+  margin-top: 0.45rem;
+  max-width: 22ch;
+}
+
+.companies-help-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.1rem, 2vw, 2rem);
+  align-items: start;
+}
+
+.companies-help-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid color-mix(in srgb, var(--line) 90%, var(--accent) 10%);
+  border-radius: 8px;
+  padding: clamp(1.2rem, 2.1vw, 1.8rem);
+}
+
+.companies-help-label {
+  margin: 0 0 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.74rem;
+  font-weight: 640;
+  color: var(--muted);
+}
+
+.companies-help-card h3 {
+  margin: 0;
+  font-size: clamp(1.28rem, 1.1vw, 1.75rem);
+}
+
+.companies-help-summary {
+  margin-top: 0.75rem;
+  margin-bottom: 1.15rem;
+  color: var(--muted);
+  max-width: 40ch;
+}
+
+.companies-help-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.companies-help-highlights li {
+  margin: 0;
+}
+
+.companies-help-highlights strong {
+  display: block;
+  font-size: 0.96rem;
+  line-height: 1.35;
+}
+
+.companies-help-highlights span {
+  display: block;
+  margin-top: 0.16rem;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.52;
+}
+
+.companies-help-toggle {
+  margin-top: 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+  background: transparent;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.48rem 0.95rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  cursor: pointer;
+}
+
+.companies-help-toggle:hover {
+  border-color: var(--accent-dark);
+  color: var(--accent-dark);
+}
+
+.companies-help-more {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid color-mix(in srgb, var(--line) 80%, var(--accent) 20%);
+  display: grid;
+  gap: 0.8rem;
+}
+
+.companies-help-more p {
+  margin: 0;
+  color: var(--muted);
 }
 
 /* CARDS */
@@ -839,6 +947,7 @@ a:hover {
   .how-we-help-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
 }
 
 @media (max-width: 900px) {
@@ -936,6 +1045,14 @@ a:hover {
 
   .cards.services-cards {
     grid-template-columns: 1fr;
+  }
+
+  .companies-help-grid {
+    gap: 0.85rem;
+  }
+
+  .companies-help-card {
+    padding: 1rem;
   }
 
   .stats-carousel {
