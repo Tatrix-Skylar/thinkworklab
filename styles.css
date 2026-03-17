@@ -537,25 +537,23 @@ p {
 }
 
 .companies-help-toggle {
-  margin-top: 1.3rem;
-  border: 0;
-  background: transparent;
-  color: var(--accent-dark);
-  padding: 0;
-  font-size: 0.93rem;
-  font-weight: 650;
+  margin-top: 1.35rem;
+  align-self: flex-start;
+  border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--line));
+  background: #fff;
+  color: #171717;
+  padding: 0.38rem 1rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 640;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   cursor: pointer;
-  width: fit-content;
-}
-
-.companies-help-toggle::before {
-  content: "→";
-  margin-right: 0.45rem;
+  line-height: 1.25;
 }
 
 .companies-help-toggle:hover {
-  color: var(--accent);
+  border-color: var(--accent-dark);
+  color: var(--accent-dark);
 }
 
 .companies-help-more {
