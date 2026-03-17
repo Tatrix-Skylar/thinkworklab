@@ -204,6 +204,115 @@
         </div>
       </section>
 
+      <section id="como-think-work-ajuda" class="section companies-help-section">
+        <div class="container companies-help-layout">
+          <div class="companies-help-intro">
+            <p class="eyebrow">Como a Think Work ajuda empresas</p>
+            <h2>Como a Think Work ajuda empresas</h2>
+          </div>
+
+          <div class="companies-help-grid">
+            <article class="companies-help-card" data-companies-card>
+              <p class="companies-help-label companies-help-label-rh">Para o RH</p>
+              <h3>Inteligência para RH</h3>
+              <p class="companies-help-summary">
+                Transformamos dados, tendências e experiências do mercado em decisões mais sólidas
+                sobre gestão de pessoas.
+              </p>
+
+              <ul class="companies-help-highlights">
+                <li>
+                  <strong>Ler o que está mudando</strong>
+                  <span>Pesquisas e diagnósticos sobre o futuro do trabalho.</span>
+                </li>
+                <li>
+                  <strong>Saber onde você está</strong>
+                  <span>Benchmark e indicadores para posicionar o RH.</span>
+                </li>
+                <li>
+                  <strong>Trocar com quem decide</strong>
+                  <span>Comunidade com CHROs e líderes da área.</span>
+                </li>
+              </ul>
+
+              <div class="companies-help-more" id="companies-help-more-rh" hidden>
+                <p>
+                  A Think Work desenvolve pesquisas proprietárias e projetos customizados que ajudam
+                  empresas a compreender como o trabalho está mudando e quais decisões precisam ser
+                  priorizadas na gestão de pessoas.
+                </p>
+                <p>
+                  A análise de práticas e indicadores permite posicionar o RH da organização em
+                  relação ao mercado, identificar lacunas e orientar escolhas com mais consistência.
+                </p>
+                <p>
+                  Esse repertório é ampliado pela proximidade com as comunidades da Think Work, que
+                  reúnem CHROs e lideranças da área, trazendo uma visão concreta dos desafios
+                  enfrentados pelas organizações.
+                </p>
+                <p>
+                  Na prática, combinamos dados, benchmark e experiência de mercado para apoiar
+                  decisões mais estratégicas sobre pessoas, liderança e organização do trabalho.
+                </p>
+              </div>
+
+              <button class="companies-help-toggle" type="button" data-toggle-more aria-expanded="false" aria-controls="companies-help-more-rh">
+                Saiba mais
+              </button>
+            </article>
+
+            <article class="companies-help-card" data-companies-card>
+              <p class="companies-help-label companies-help-label-fornecedores">Para Fornecedores</p>
+              <h3>Conexão com o ecossistema de RH</h3>
+              <p class="companies-help-summary">
+                Ajudamos empresas a construir relevância no mercado de RH, conectando estratégia,
+                posicionamento e acesso às lideranças da área.
+              </p>
+
+              <ul class="companies-help-highlights">
+                <li>
+                  <strong>Construir autoridade no tema</strong>
+                  <span>Pesquisas e estudos que posicionam sua marca.</span>
+                </li>
+                <li>
+                  <strong>Acessar quem influencia decisões</strong>
+                  <span>Conexão com lideranças de RH e o ecossistema.</span>
+                </li>
+                <li>
+                  <strong>Entrar na conversa certa</strong>
+                  <span>Eventos, curadoria e preparo de equipes.</span>
+                </li>
+              </ul>
+
+              <div class="companies-help-more" id="companies-help-more-fornecedores" hidden>
+                <p>
+                  A Think Work apoia empresas que querem se posicionar no mercado de RH por meio de
+                  pesquisas, estudos e projetos editoriais que ajudam a construir autoridade e
+                  relevância no setor.
+                </p>
+                <p>
+                  Os dados gerados também orientam decisões de negócio, apoiando a definição de
+                  estratégias, produtos e ofertas mais alinhadas às demandas da área de pessoas.
+                </p>
+                <p>
+                  Nossos eventos proprietários e iniciativas conectam empresas às lideranças que
+                  influenciam como as organizações tomam decisões sobre gestão de pessoas no Brasil.
+                </p>
+                <p>
+                  Além disso, desenvolvemos eventos e experiências sob medida, apoiando na definição
+                  de temas, curadoria de palestrantes e formatos, e treinamos equipes para qualificar
+                  conversas e comunicações com o público de RH.
+                </p>
+              </div>
+
+              <button class="companies-help-toggle" type="button" data-toggle-more aria-expanded="false" aria-controls="companies-help-more-fornecedores">
+                Saiba mais
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section id="numeros" class="section">
         <div class="container">
           <h2>Think Work Lab em números</h2>
@@ -564,6 +673,24 @@
 
         setInterval(() => updateCarousel(currentIndex + 1), 3500);
       }
+
+      const companiesToggleButtons = document.querySelectorAll('[data-toggle-more]');
+
+      companiesToggleButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const contentId = button.getAttribute('aria-controls');
+          const moreContent = contentId ? document.getElementById(contentId) : null;
+
+          if (!moreContent) {
+            return;
+          }
+
+          const isExpanded = button.getAttribute('aria-expanded') === 'true';
+          button.setAttribute('aria-expanded', String(!isExpanded));
+          button.textContent = isExpanded ? 'Saiba mais' : 'Mostrar menos';
+          moreContent.hidden = isExpanded;
+        });
+      });
     </script>
   </body>
 </html>
