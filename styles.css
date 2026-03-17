@@ -284,7 +284,11 @@ h2 {
 #sobre h2,
 #como-ajudamos h2,
 #inteligencia-think-work h2,
-#como-think-work-ajuda h2 {
+#como-think-work-ajuda h2,
+#insights-destaque h2,
+#solucoes-detalhadas h2,
+#provas h2 {
+
   position: relative;
   display: inline-block;
 }
@@ -298,7 +302,11 @@ h2 {
 #sobre h2::after,
 #como-ajudamos h2::after,
 #inteligencia-think-work h2::after,
-#como-think-work-ajuda h2::after {
+#como-think-work-ajuda h2::after,
+#insights-destaque h2::after,
+#solucoes-detalhadas h2::after,
+#provas h2::after {
+
   content: "";
   position: absolute;
   left: 0;
@@ -970,12 +978,89 @@ a:hover {
   color: var(--accent);
 }
 
+
+
+.insights-featured {
+  background: #f6f3ef;
+}
+
+.featured-covers-grid {
+  margin-top: var(--space-4);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.featured-cover-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 0.7rem;
+}
+
+.featured-cover-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+.featured-cover-card h3 {
+  margin: 0.75rem 0 0;
+  font-size: 1rem;
+}
+
+.solutions-detailed-section {
+  background: #fff;
+}
+
+.solutions-detailed-grid {
+  margin-top: var(--space-4);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.solutions-detailed-card {
+  border: 1px solid var(--line);
+  padding: 1.25rem;
+  background: #faf9f7;
+}
+
+.proofs-section {
+  background: #f8f7f5;
+}
+
+.proofs-grid {
+  margin-top: var(--space-4);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  align-items: start;
+}
+
+.proofs-numbers .stats-carousel {
+  margin-top: 1rem;
+}
+
+.proofs-media h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
 @media (max-width: 1100px) {
   .cards.services-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .solutions-detailed-grid,
+  .proofs-grid {
+    grid-template-columns: 1fr;
+  }
+
   .how-we-help-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .featured-covers-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1010,6 +1095,11 @@ a:hover {
 
   .cards.services-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .solutions-detailed-grid,
+  .proofs-grid {
+    grid-template-columns: 1fr;
   }
 
   .how-we-help-grid {
@@ -1075,6 +1165,10 @@ a:hover {
 
 
   .cards.services-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-covers-grid {
     grid-template-columns: 1fr;
   }
 
