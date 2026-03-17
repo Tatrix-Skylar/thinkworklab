@@ -681,14 +681,19 @@
           const contentId = button.getAttribute('aria-controls');
           const moreContent = contentId ? document.getElementById(contentId) : null;
 
-          if (!moreContent) {
-            return;
-          }
+          if (!moreContent) return;
 
           const isExpanded = button.getAttribute('aria-expanded') === 'true';
-          button.setAttribute('aria-expanded', String(!isExpanded));
-          button.textContent = isExpanded ? 'Saiba mais' : 'Mostrar menos';
-          moreContent.hidden = isExpanded;
+
+          if (isExpanded) {
+            moreContent.hidden = true;
+            button.setAttribute('aria-expanded', 'false');
+            button.textContent = 'Saiba mais';
+          } else {
+            moreContent.hidden = false;
+            button.setAttribute('aria-expanded', 'true');
+            button.textContent = 'Mostrar menos';
+          }
         });
       });
     </script>
