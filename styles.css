@@ -553,6 +553,10 @@ p {
   line-height: 1.5;
 }
 
+.companies-help-link {
+  margin-top: 1.5rem;
+}
+
 .companies-help-toggle {
   margin-top: 1.15rem;
   align-self: flex-start;
