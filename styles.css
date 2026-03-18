@@ -1285,33 +1285,82 @@ a:hover {
 }
 
 .proofs-section {
-  background: #f8f7f5;
+  background: linear-gradient(180deg, #f8f7f5 0%, #fffdfa 100%);
 }
 
-.proofs-grid {
+.proofs-stack {
   margin-top: var(--space-4);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-3);
-  align-items: start;
+  gap: 1.4rem;
 }
 
-.proofs-numbers .stats-carousel {
-  margin-top: 1rem;
+.proofs-panel {
+  display: grid;
+  gap: 1.4rem;
+  padding: clamp(1.4rem, 1vw + 1.1rem, 2rem);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(36, 30, 23, 0.08);
+  border-radius: 28px;
+  box-shadow: 0 18px 50px rgba(46, 33, 24, 0.08);
 }
 
-.proofs-media h3 {
+.proofs-panel-header {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 70ch;
+}
+
+.proofs-panel-header h3,
+.proofs-media-card h4 {
+  margin: 0;
+  color: var(--text);
+}
+
+.proofs-panel-header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.proofs-stats-grid {
   margin-top: 0;
+}
+
+.proofs-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.proofs-media-card {
+  gap: 0.75rem;
+}
+
+.proofs-media-source {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line));
   color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.proofs-media-card h4 {
+  font-size: 1.15rem;
+  line-height: 1.28;
+}
+
+.proofs-media-card p {
+  min-height: 0;
 }
 @media (max-width: 1100px) {
   .cards.services-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .proofs-grid {
-    grid-template-columns: 1fr;
-  }
 
   .how-we-help-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1341,7 +1390,8 @@ a:hover {
 @media (max-width: 900px) {
   .innovations-hero,
   .innovations-stats,
-  .innovations-links-grid {
+  .innovations-links-grid,
+  .proofs-stats-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1413,15 +1463,12 @@ a:hover {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .proofs-grid {
-    grid-template-columns: 1fr;
-  }
 
   .how-we-help-grid {
     grid-template-columns: 1fr;
   }
 
-  .media-list {
+  .proofs-media-grid {
     grid-template-columns: 1fr;
   }
 
