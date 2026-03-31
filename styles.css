@@ -1219,11 +1219,16 @@ a:hover {
 
 .insights-featured {
   background: #f6f3ef;
+  color: #1b1b1b;
 }
 
 .insights-featured-lead {
-  max-width: 72ch;
-  margin-top: 0.75rem;
+  max-width: 66ch;
+  margin-top: 1rem;
+  font-size: clamp(1.02rem, 0.32vw + 0.95rem, 1.18rem);
+  line-height: 1.8;
+  color: #404040;
+  font-weight: 500;
 }
 
 .featured-covers-grid {
@@ -1258,7 +1263,7 @@ a:hover {
 
 .featured-cover-card p {
   margin: 0;
-  color: #d4d4d4;
+  color: #5a5a5a;
 }
 
 .featured-cover-card a {
