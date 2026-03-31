@@ -572,6 +572,15 @@ p {
 
 .companies-help-link {
   margin-top: 1.5rem;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #111111;
+}
+
+.companies-help-link:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: #111111;
 }
 
 .companies-help-toggle {
