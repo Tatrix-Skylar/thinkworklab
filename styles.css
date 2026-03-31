@@ -82,20 +82,8 @@ body {
   font-size: 0.82rem;
   font-weight: 700;
   line-height: 1.1;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
 }
 
-.brand img {
-  width: 44px;
-  height: auto;
-  display: block;
-}
-
-.brand span {
-  color: #f4f4f4;
-}
 
 .nav {
   display: flex;
@@ -1691,31 +1679,6 @@ a:hover {
 }
 
 
-.hero-image::before {
-  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.34));
-}
-
-.hero-copy,
-.hero-tertiary-link {
-  color: #d5d5d5;
-}
-
-.section {
-  background: #0a0a0a;
-}
-
-.companies-help-section,
-.insights-featured,
-#provas,
-#quem-faz,
-#contato {
-  background: #d9dcdf;
-}
-
-.companies-help-card,
-.featured-cover-card,
-.proof-card,
-.team-card,
-.contact-card {
-  border-radius: 18px;
+.brand {
+  max-width: 100%;
 }
