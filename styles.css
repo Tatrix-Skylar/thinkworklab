@@ -70,12 +70,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.95rem 0;
+  padding: 0.5rem 0;
   gap: 1rem;
 }
 
 .brand {
   text-decoration: none;
+  max-height: 34px;
   color: var(--text);
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -90,9 +91,9 @@ body {
 
 .brand img,
 .brand-logo {
-  height: 28px;
+  height: 24px;
   width: auto;
-  max-width: min(44vw, 180px);
+  max-width: min(42vw, 150px);
   object-fit: contain;
   display: block;
   flex: 0 0 auto;
