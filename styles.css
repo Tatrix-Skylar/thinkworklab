@@ -1701,3 +1701,8 @@ a:hover {
     scroll-behavior: auto !important;
   }
 }
+
+
+.brand {
+  max-width: 100%;
+}
